@@ -1,0 +1,11 @@
+name: My Workflow
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Run action
+      uses: jainal09/strivio@master
+      with:
+        oath: ${{ secrets.oath }}
